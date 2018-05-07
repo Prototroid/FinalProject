@@ -13,7 +13,7 @@ public class MuffinMan : IEnemy
     public Vector3 target;
     private bool letMove;
 
-    int doOnce = 0;
+    int doNum = 0;
 
 
     /** Start
@@ -68,12 +68,12 @@ public class MuffinMan : IEnemy
         }
         else if (GetComponent<IEnemy>().Health <= 0)
         {
-            if (doOnce < 33)
+            if (doNum < 33)
             {
                 //Debug.Log("Dead: " + doOnce);
                 //animator.Play("MuffinMan_Dead");
                 //animation["MuffinMan_Dead"].wrapMode = WrapMode.Once;
-                doOnce++;
+                doNum++;
             }
             else
             {
